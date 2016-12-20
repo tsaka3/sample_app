@@ -31,6 +31,13 @@ gem 'bcrypt', '3.1.11'
 # Use Twitter Bootstrap
 gem 'bootstrap-sass', '3.3.6'
 
+# Use faker
+gem 'faker',          '1.6.6'
+
+# Pagenation
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '1.3.11'
