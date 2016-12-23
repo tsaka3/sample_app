@@ -7,6 +7,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:michael)
+    @new_user = users(:newbie)
   end
 
   test "unsuccessful edit" do
@@ -68,6 +69,11 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     @user.reload
     assert_equal name,  @user.name
     assert_equal email, @user.email
+  end
+
+  test "should redirect edit when not activated" do
+    get edit_user_path(@new_user)
+    assert_redirected_to root_url
   end
 
 end
