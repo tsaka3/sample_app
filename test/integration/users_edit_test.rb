@@ -57,7 +57,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     get edit_user_path(@user)
     log_in_as(@user)
     assert_redirected_to edit_user_url(@user)
-    assert_equal session[:forwarding_url], nil
+    assert_nil session[:forwarding_url]
     name  = "Foo Bar"
     email = "foo@bar.com"
     patch user_path(@user), params: { user: { name:  name,
@@ -71,8 +71,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal email, @user.email
   end
 
-  test "should redirect edit when not activated" do
-    get edit_user_path(@new_user)
+  test "should redirect show when not activated" do
+    get user_path(@new_user)
     assert_redirected_to root_url
   end
 
