@@ -13,5 +13,8 @@ module SampleApp
     # -- all .rb files in that directory are automatically loaded.
 
     config.web_console.development_only = false
+
+    # 認証トークンをremoteフォームに埋め込む
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
