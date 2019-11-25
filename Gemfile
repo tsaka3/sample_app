@@ -29,7 +29,7 @@ gem 'bcrypt', '3.1.11'
 # gem 'capistrano-rails', group: :development
 
 # Use Twitter Bootstrap
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '3.4.1'
 
 # Use faker
 gem 'faker',          '1.6.6'
